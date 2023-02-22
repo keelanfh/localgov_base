@@ -16,7 +16,7 @@
   <nav class="breadcrumbs" aria-labelledby="system-breadcrumbs">
     <h2 id="system-breadcrumbs" class="visually-hidden">{{ 'Breadcrumbs'|t }}</h2>
     <ol class="breadcrumbs__list">
-      {% for item in breadcrumb %}
+      {% for item in breadcrumb |slice(0, -1)%}
         <li class="breadcrumbs__item">
           {% if item.url %}
             <a class="breadcrumbs__link" href="{{ item.url }}">{{ item.text }}</a>
